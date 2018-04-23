@@ -1,0 +1,269 @@
+================================================================================
+==== Node Report ===============================================================
+
+Event: exception, location: "OnUncaughtException"
+Filename: node-report.20180418.150229.17548.001.txt
+Dump event time:  2018/04/18 15:02:29
+Module load time: 2018/04/18 15:02:29
+Process ID: 17548
+Command line: node /Users/jiaxi/.nvm/versions/node/v8.11.1/bin/composer card delete -c PeerAdmin@byfn-network-org2 -c PeerAdmin@byfn-network-org1
+
+Node.js version: v8.11.1
+(http_parser: 2.8.0, v8: 6.2.414.50, uv: 1.19.1, zlib: 1.2.11, ares: 1.10.1-DEV,
+ modules: 57, nghttp2: 1.25.0, openssl: 1.0.2o, icu: 60.1, unicode: 10.0,
+ cldr: 32.0, tz: 2017c)
+
+node-report version: 2.2.1 (built against Node.js v8.11.1, 64 bit)
+
+OS version: Darwin 17.5.0 Darwin Kernel Version 17.5.0: Mon Mar  5 22:24:32 PST 2018; root:xnu-4570.51.1~1/RELEASE_X86_64
+
+Machine: jiaxi.local x86_64
+
+================================================================================
+==== JavaScript Stack Trace ====================================================
+
+Object.parseArgs [as _parseArgs] (/Users/jiaxi/.nvm/versions/node/v8.11.1/lib/node_modules/composer-cli/node_modules/yargs/yargs.js:1:1)
+Object.get [as argv] (/Users/jiaxi/.nvm/versions/node/v8.11.1/lib/node_modules/composer-cli/node_modules/yargs/yargs.js:1:1)
+Object.<anonymous> (/Users/jiaxi/.nvm/versions/node/v8.11.1/lib/node_modules/composer-cli/cli.js:1:1)
+Module._compile (module.js:1:1)
+Object.Module._extensions..js (module.js:1:1)
+Module.load (module.js:1:1)
+tryModuleLoad (module.js:1:1)
+Function.Module._load (module.js:1:1)
+Function.Module.runMain (module.js:1:1)
+startup (bootstrap_node.js:1:1)
+bootstrap_node.js:1:1
+
+================================================================================
+==== Native Stack Trace ========================================================
+
+ 0: [pc=0x1025eb2d5] nodereport::OnUncaughtException(v8::Isolate*) [/Users/jiaxi/.nvm/versions/node/v8.11.1/lib/node_modules/composer-cli/node_modules/node-report/api.node]
+ 1: [pc=0x10062d163] v8::internal::Isolate::Throw(v8::internal::Object*, v8::internal::MessageLocation*) [/Users/jiaxi/.nvm/versions/node/v8.11.1/bin/node]
+ 2: [pc=0x1007d427b] v8::internal::Runtime_Throw(int, v8::internal::Object**, v8::internal::Isolate*) [/Users/jiaxi/.nvm/versions/node/v8.11.1/bin/node]
+ 3: [pc=0x108ba1a042fd] 
+ 4: [pc=0x108ba1b07a7a] 
+ 5: [pc=0x108ba1abd196] 
+ 6: [pc=0x108ba1a0535f] 
+ 7: [pc=0x108ba1abd196] 
+
+================================================================================
+==== JavaScript Heap and Garbage Collector =====================================
+
+Heap space name: new_space
+    Memory size: 33,554,432 bytes, committed memory: 15,996,608 bytes
+    Capacity: 16,498,688 bytes, used: 4,790,712 bytes, available: 11,707,976 bytes
+Heap space name: old_space
+    Memory size: 17,625,088 bytes, committed memory: 17,463,864 bytes
+    Capacity: 17,174,616 bytes, used: 15,940,536 bytes, available: 1,234,080 bytes
+Heap space name: code_space
+    Memory size: 2,097,152 bytes, committed memory: 1,390,944 bytes
+    Capacity: 2,013,824 bytes, used: 1,315,776 bytes, available: 698,048 bytes
+Heap space name: map_space
+    Memory size: 1,593,344 bytes, committed memory: 1,223,168 bytes
+    Capacity: 1,558,264 bytes, used: 968,968 bytes, available: 589,296 bytes
+Heap space name: large_object_space
+    Memory size: 2,297,856 bytes, committed memory: 2,297,856 bytes
+    Capacity: 1,444,551,856 bytes, used: 2,264,752 bytes, available: 1,442,287,104 bytes
+
+Total heap memory size: 57,167,872 bytes
+Total heap committed memory: 38,372,440 bytes
+Total used heap memory: 25,280,744 bytes
+Total available heap memory: 1,456,516,504 bytes
+
+Heap memory limit: 1,501,560,832
+
+================================================================================
+==== Resource Usage ============================================================
+
+Process total resource usage:
+  User mode CPU: 0.722638 secs
+  Kernel mode CPU: 0.238442 secs
+  Average CPU Consumption : 96.108%
+  Maximum resident set size: 68,241,326,080 bytes
+  Page faults: 3486 (I/O required) 13357 (no I/O required)
+  Filesystem activity: 0 reads 0 writes
+
+================================================================================
+==== Node.js libuv Handle Summary ==============================================
+
+(Flags: R=Ref, A=Active)
+Flags  Type      Address             Details
+[-A]   async     0x00000001023005d0  
+[--]   check     0x00007ffeefbfdd70  
+[R-]   idle      0x00007ffeefbfdde8  
+[--]   prepare   0x00007ffeefbfde60  
+[--]   check     0x00007ffeefbfded8  
+[-A]   async     0x000000010156d290  
+[-A]   async     0x0000000102301600  
+[-A]   async     0x00000001026013a0  
+[R-]   timer     0x0000000102219290  repeat: 0, timeout expired: 359901740 ms ago
+[R-]   tty       0x0000000102303128  width: 189, height: 43, file descriptor: 10, write queue size: 0, writable
+[-A]   signal    0x0000000102401850  signum: 28 (SIGWINCH)
+[R-]   tty       0x00000001024019a8  width: 189, height: 43, file descriptor: 12, write queue size: 0, writable
+[-A]   async     0x000000010221a690  
+[-A]   async     0x00000001023024c0  
+[-A]   async     0x00000001023048b0  
+[-A]   async     0x0000000102229c60  
+[-A]   async     0x0000000102303630  
+[-A]   async     0x0000000102402ac0  
+[-A]   async     0x000000010230ecf0  
+[-A]   async     0x000000010222a6a0  
+[-A]   async     0x0000000102229b20  
+[-A]   async     0x00000001025f2f78  
+[-A]   async     0x0000000102312ee0  
+[-A]   async     0x00000001026035d0  
+
+================================================================================
+==== System Information ========================================================
+
+Environment variables
+  TERM_SESSION_ID=w0t1p0:C8A3677F-3EA2-4347-B0B0-A4DB8E99FFFE
+  SSH_AUTH_SOCK=/private/tmp/com.apple.launchd.hrM2yBdJCN/Listeners
+  Apple_PubSub_Socket_Render=/private/tmp/com.apple.launchd.DAWgiaPCga/Render
+  COLORFGBG=15;0
+  ITERM_PROFILE=Default
+  XPC_FLAGS=0x0
+  PWD=/Users/jiaxi/work/composer-work/multi-org
+  SHELL=/bin/zsh
+  SECURITYSESSIONID=186a8
+  LC_CTYPE=UTF-8
+  TERM_PROGRAM_VERSION=3.1.5
+  TERM_PROGRAM=iTerm.app
+  PATH=/Users/jiaxi/.nix-profile/bin:/Users/jiaxi/.nix-profile/sbin:/Users/jiaxi/.nix-profile/lib/kde4/libexec:/nix/var/nix/profiles/default/bin:/nix/var/nix/profiles/default/sbin:/nix/var/nix/profiles/default/lib/kde4/libexec:/usr/local/opt/php72/bin:/usr/local/opt/gnu-sed/libexec/gnubin:/Users/jiaxi/work/bin:/usr/local/texlive/2016basic/bin/x86_64-darwin:/usr/local/sbin:/Users/jiaxi/.cargo/bin:/Users/jiaxi/.rvm/gems/ruby-2.4.0/bin:/Users/jiaxi/.rvm/gems/ruby-2.4.0@global/bin:/Users/jiaxi/.rvm/rubies/ruby-2.4.0/bin:/Users/jiaxi/.nvm/versions/node/v8.11.1/bin:/Users/jiaxi/code/golang/bin:/Users/jiaxi/.rvm/bin:/Users/jiaxi/.composer/vendor/bin:/usr/local/go/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/jiaxi/.rvm/bin:/Users/jiaxi/.fzf/bin:/usr/local/opt/android-sdk/bin:/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home/bin:/usr/local/opt/go/libexec/bin
+  DBUS_LAUNCHD_SESSION_BUS_SOCKET=/private/tmp/com.apple.launchd.dGVu1xRroL/unix_domain_listener
+  DISPLAY=/private/tmp/com.apple.launchd.UUCCrgsRQw/org.macosforge.xquartz:0
+  COLORTERM=truecolor
+  TERM=xterm-256color
+  HOME=/Users/jiaxi
+  TMPDIR=/var/folders/mv/hk17qpmd031cfyys4bcgml4w0000gp/T/
+  USER=jiaxi
+  XPC_SERVICE_NAME=0
+  LOGNAME=jiaxi
+  __CF_USER_TEXT_ENCODING=0x1F6:0x0:0x0
+  ITERM_SESSION_ID=w0t1p0:C8A3677F-3EA2-4347-B0B0-A4DB8E99FFFE
+  SHLVL=1
+  OLDPWD=/Users/jiaxi/work/composer-work/single-org
+  ZSH=/Users/jiaxi/.oh-my-zsh
+  PAGER=less
+  LESS=-R
+  LSCOLORS=Gxfxcxdxbxegedabagacad
+  LC_TYPE=en.US.UTF-8
+  LANG=en_US.UTF-8
+  HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles
+  GOPATH=/Users/jiaxi/code/golang
+  NVM_DIR=/Users/jiaxi/.nvm
+  NVM_CD_FLAGS=-q
+  NVM_BIN=/Users/jiaxi/.nvm/versions/node/v8.11.1/bin
+  rvm_prefix=/Users/jiaxi
+  rvm_path=/Users/jiaxi/.rvm
+  rvm_bin_path=/Users/jiaxi/.rvm/bin
+  _system_type=Darwin
+  _system_name=OSX
+  _system_version=10.13
+  _system_arch=x86_64
+  rvm_version=1.29.1 (latest)
+  GEM_HOME=/Users/jiaxi/.rvm/gems/ruby-2.4.0
+  GEM_PATH=/Users/jiaxi/.rvm/gems/ruby-2.4.0:/Users/jiaxi/.rvm/gems/ruby-2.4.0@global
+  MY_RUBY_HOME=/Users/jiaxi/.rvm/rubies/ruby-2.4.0
+  IRBRC=/Users/jiaxi/.rvm/rubies/ruby-2.4.0/.irbrc
+  RUBY_VERSION=ruby-2.4.0
+  NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node
+  NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node
+  COMP_WORDBREAKS=
+  ELECTRON_MIRROR=https://npm.taobao.org/mirrors/electron/
+  EDITOR=vim
+  XML_CATALOG_FILES=/usr/local/etc/xml/catalog
+  ANDROID_HOME=/usr/local/opt/android-sdk
+  JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_91.jdk/Contents/Home
+  GITLAB_API_ENDPOINT=https://115.29.209.185/api/v3
+  GITLAB_API_PRIVATE_TOKEN=HrCD1m7WqLm1mxoq4dgn
+  GITLAB_API_HTTPARTY_OPTIONS={verify: false}
+  MANPATH=/usr/local/opt/gnu-sed/libexec/gnuman:
+  NIX_REMOTE=daemon
+  NIX_USER_PROFILE_DIR=/nix/var/nix/profiles/per-user/jiaxi
+  NIX_PROFILES=/nix/var/nix/profiles/default /Users/jiaxi/.nix-profile
+  NIX_SSL_CERT_FILE=/nix/var/nix/profiles/default/etc/ssl/certs/ca-bundle.crt
+  NIX_PATH=/nix/var/nix/profiles/per-user/root/channels
+  rvm_alias_expanded=
+  rvm_bin_flag=
+  rvm_docs_type=
+  rvm_gemstone_package_file=
+  rvm_gemstone_url=
+  rvm_niceness=
+  rvm_nightly_flag=
+  rvm_only_path_flag=
+  rvm_proxy=
+  rvm_quiet_flag=
+  rvm_ruby_bits=
+  rvm_ruby_file=
+  rvm_ruby_make=
+  rvm_ruby_make_install=
+  rvm_ruby_mode=
+  rvm_script_name=
+  rvm_sdk=
+  rvm_silent_flag=
+  rvm_use_flag=
+  rvm_wrapper_name=
+  rvm_hook=
+  _=/Users/jiaxi/.nvm/versions/node/v8.11.1/bin/composer
+
+Resource limits                        soft limit      hard limit
+  core file size (blocks)                       0       unlimited
+  data seg size (kbytes)                unlimited       unlimited
+  file size (blocks)                    unlimited       unlimited
+  max locked memory (bytes)             unlimited       unlimited
+  max memory size (kbytes)              unlimited       unlimited
+  open files                                10240       unlimited
+  stack size (bytes)                      8388608        67104768
+  cpu time (seconds)                    unlimited       unlimited
+  max user processes                          709            1064
+  virtual memory (kbytes)               unlimited       unlimited
+
+Loaded libraries
+  /Users/jiaxi/.nvm/versions/node/v8.11.1/bin/node
+  /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+  /usr/lib/libSystem.B.dylib
+  /usr/lib/libc++.1.dylib
+  /usr/lib/libDiagnosticMessagesClient.dylib
+  /usr/lib/libicucore.A.dylib
+  /usr/lib/libobjc.A.dylib
+  /usr/lib/libz.1.dylib
+  /usr/lib/system/libcache.dylib
+  /usr/lib/system/libcommonCrypto.dylib
+  /usr/lib/system/libcompiler_rt.dylib
+  /usr/lib/system/libcopyfile.dylib
+  /usr/lib/system/libcorecrypto.dylib
+  /usr/lib/system/libdispatch.dylib
+  /usr/lib/system/libdyld.dylib
+  /usr/lib/system/libkeymgr.dylib
+  /usr/lib/system/liblaunch.dylib
+  /usr/lib/system/libmacho.dylib
+  /usr/lib/system/libquarantine.dylib
+  /usr/lib/system/libremovefile.dylib
+  /usr/lib/system/libsystem_asl.dylib
+  /usr/lib/system/libsystem_blocks.dylib
+  /usr/lib/system/libsystem_c.dylib
+  /usr/lib/system/libsystem_configuration.dylib
+  /usr/lib/system/libsystem_coreservices.dylib
+  /usr/lib/system/libsystem_darwin.dylib
+  /usr/lib/system/libsystem_dnssd.dylib
+  /usr/lib/system/libsystem_info.dylib
+  /usr/lib/system/libsystem_m.dylib
+  /usr/lib/system/libsystem_malloc.dylib
+  /usr/lib/system/libsystem_network.dylib
+  /usr/lib/system/libsystem_networkextension.dylib
+  /usr/lib/system/libsystem_notify.dylib
+  /usr/lib/system/libsystem_sandbox.dylib
+  /usr/lib/system/libsystem_secinit.dylib
+  /usr/lib/system/libsystem_kernel.dylib
+  /usr/lib/system/libsystem_platform.dylib
+  /usr/lib/system/libsystem_pthread.dylib
+  /usr/lib/system/libsystem_symptoms.dylib
+  /usr/lib/system/libsystem_trace.dylib
+  /usr/lib/system/libunwind.dylib
+  /usr/lib/system/libxpc.dylib
+  /usr/lib/closure/libclosured.dylib
+  /usr/lib/libc++abi.dylib
+  /Users/jiaxi/.nvm/versions/node/v8.11.1/lib/node_modules/composer-cli/node_modules/node-report/api.node
+
+================================================================================

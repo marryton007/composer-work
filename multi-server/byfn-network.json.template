@@ -1,0 +1,85 @@
+{
+  "name": "byfn-network",
+  "x-type": "hlfv1",
+  "version": "1.0.1",
+  "channels": {
+    "mychannel": {
+      "orderers": [
+        "orderer.example.com"
+      ],
+      "peers": {
+        "peer0.org1.example.com": {
+          "endorsingPeer": true,
+          "chaincodeQuery": true,
+          "eventSource": true
+        },
+        "peer0.org2.example.com": {
+          "endorsingPeer": true,
+          "chaincodeQuery": true,
+          "eventSource": true
+        }
+      }
+    }
+  },
+  "organizations": {
+    "Org1": {
+      "mspid": "Org1MSP",
+      "peers": [
+        "peer0.org1.example.com",
+        "peer1.org1.example.com"
+      ],
+      "certificateAuthorities": [
+        "ca.org1.example.com"
+      ]
+    },
+    "Org2": {
+      "mspid": "Org2MSP",
+      "peers": [
+        "peer0.org2.example.com",
+        "peer1.org2.example.com"
+      ],
+      "certificateAuthorities": [
+        "ca.org2.example.com"
+      ]
+    }
+  },
+  "orderers": {
+    "orderer.example.com": {
+      "url": "grpc://192.168.1.206:32000"
+    }
+  },
+  "peers": {
+    "peer0.org1.example.com": {
+      "url": "grpc://192.168.1.206:30001",
+      "eventUrl": "grpc://192.168.1.206:30003"
+    },
+    "peer1.org1.example.com": {
+      "url": "grpc://192.168.1.206:30004",
+      "eventUrl": "grpc://192.168.1.206:30006"
+    },
+    "peer0.org2.example.com": {
+      "url": "grpc://192.168.1.206:30101",
+      "eventUrl": "grpc://192.168.1.206:30103"
+    },
+    "peer1.org2.example.com": {
+      "url": "grpc://192.168.1.206:30104",
+      "eventUrl": "grpc://192.168.1.206:30106"
+    }
+  },
+  "certificateAuthorities": {
+    "ca.org1.example.com": {
+      "url": "http://192.168.1.206:30000",
+      "caName": "ca",
+      "httpOptions": {
+        "verify": false
+      }
+    },
+    "ca.org2.example.com": {
+      "url": "http://192.168.1.206:30100",
+      "caName": "ca",
+      "httpOptions": {
+        "verify": false
+      }
+    }
+  }
+}

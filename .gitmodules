@@ -1,0 +1,4 @@
+[submodule "multi-org/fabric-samples"]
+	path = multi-org/fabric-samples
+	url = https://github.com/sstone1/fabric-samples.git
+	branch = issue-6978
